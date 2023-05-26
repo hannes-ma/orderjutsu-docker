@@ -1,0 +1,59 @@
+version: '3'
+
+#
+# Environment vars for orderjutsu download link and database login credentials
+# are loaded from the ".env" file.
+#
+# So make sure all required environment variables are present in that file:
+#    ORDERJUTSU_LINK=https://orderjutsu.org/?download_file=...
+#    ORDERJUTSU_VERSION=1.xx.xx
+#    DB_DATABASE=orderjutsu
+#    DB_USER=orderjutsu
+#    DB_PASSWORD=yourPassword123
+# 
+
+services:
+  
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ORDERJUTSU_LINK: ${ORDERJUTSU_LINK}
+        DB_HOST: db
+        DB_DATABASE: ${DB_DATABASE}
+        DB_USER: ${DB_USER}
+        DB_PASSWORD: ${DB_PASSWORD}
+    image: orderjutsu:${ORDERJUTSU_VERSION}
+    container_name: orderjutsu-app
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - app-network
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest
+    container_name: orderjutsu-db
+    restart: unless-stopped
+    environment:
+      - MARIADB_ROOT_PASSWORD=${DB_PASSWORD}
+      - MARIADB_DATABASE=${DB_DATABASE}
+      - MARIADB_USER=${DB_USER}
+      - MARIADB_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+    
+volumes:
+  dbdata:
+    driver: local
