@@ -21,6 +21,8 @@ Ins Verzeichnis wechseln und ausführen:
 ```
 docker-compose up
 ```
+Orderjutsu ist nach erfolgreichem Ausführen auf der Adresse *http://localhost:80* erreichbar.
+
 
 
 
