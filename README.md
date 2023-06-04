@@ -17,10 +17,13 @@ Weiters sind die Datenbankparameter für Benutzer, Passwort und Name der Datenba
 *Achtung: Diese .env hat nichts mit der .env von Orderjutsu gemein. Sie dient nur docker-compose zum Laden der Umgebungsvariablen!*
 
 ## Ausführen
-Ins Verzeichnis wechseln und ausführen:
 ```
+git clone https://github.com/hannes-ma/orderjutsu-docker.git
+cd orderjutsu-docker
 docker-compose up
 ```
+**Achtung bei Git unter Windows**: Beachten dass bei git clone keine automatische Konvertierung der Zeilenenden von LF nach CRLF erfolgt (ansonsten kommt es zu Fehlermeldungen wie z.B. "init.sh not found"). In diesem Fall besser die Dateien in github als Zip-Datei herunterladen (oben rechts Code->Download ZIP)
+
 Orderjutsu ist nach erfolgreichem Ausführen auf der Adresse *http://localhost:80* erreichbar.
 
 
