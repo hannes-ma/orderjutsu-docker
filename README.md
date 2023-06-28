@@ -1,7 +1,7 @@
 # orderjutsu-docker
 Docker Dateien für Orderjutsu Bestellsystem
 
-## Wie funktioniert das?
+## Wie funktionierts?
 Damit Orderjutsu funktioniert braucht es:
   * einen Webserver (nginx)
   * den PHP-Interpreter
@@ -37,7 +37,7 @@ Orderjutsu ist nach erfolgreichem Ausführen auf der Adresse *http://localhost:80
 
 ### Log-Dateien
  
-Fehlermeldungen von nginx und php werden direkt ins Docker log geschrieben:
+Fehlermeldungen werden direkt ins Docker Log geschrieben:
 ```
 docker logs orderjutsu-php
 docker logs orderjutsu-nginx
