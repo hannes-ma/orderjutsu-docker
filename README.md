@@ -1,6 +1,8 @@
 # orderjutsu-docker
 Docker Dateien für Orderjutsu Bestellsystem
 
+2023-06-28: Achtung Docker Dateien wurden aktualisiert. Um mehr der Docker Philosophie zu entsprechen und durch Nutzung der offiziellen Images mehr Architekturen unterstützen zu können (speziell x86/amd64 und arm) wurden nginx und php in zwei getrennte Container aufgeteilt. Für die alte Methode mit nginx+php in einem Container siehe Branch '***all-in-one***'.
+
 ## Wie funktionierts?
 Damit Orderjutsu funktioniert braucht es:
   * einen Webserver (nginx)
