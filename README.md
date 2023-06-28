@@ -1,5 +1,8 @@
 # orderjutsu-docker
-Docker Dateien für Orderjutsu Bestellsystem
+Docker Dateien für das Bestellsystem *Orderjutsu* von DI Alexander Herzog.
+-> https://orderjutsu.org
+
+Bitte beachten, dass hier nur die Docker Konfigurationsdateien bereitgestellt werden. Der benötigte Download-Link für die Software, sowie die dazugehörige Lizenz ist unabhängig davon über die Orderjutus Webseite zu erwerben!
 
 2023-06-28: Achtung Docker Dateien wurden aktualisiert. Um mehr der Docker Philosophie zu entsprechen und durch Nutzung der offiziellen Images mehr Architekturen unterstützen zu können (speziell x86/amd64 und arm) wurden nginx und php in zwei getrennte Container aufgeteilt. Für die alte Methode mit nginx+php in einem Container siehe Branch '***all-in-one***'.
 
