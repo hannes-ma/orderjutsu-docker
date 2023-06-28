@@ -1,8 +1,7 @@
 # orderjutsu-docker
-Docker Dateien für das Bestellsystem *Orderjutsu* von DI Alexander Herzog.
--> https://orderjutsu.org
+Docker Dateien für das Bestellsystem *Orderjutsu* von DI Alexander Herzog - https://orderjutsu.org
 
-Bitte beachten, dass hier nur die Docker Konfigurationsdateien bereitgestellt werden. Der benötigte Download-Link für die Software, sowie die dazugehörige Lizenz ist unabhängig davon über die Orderjutus Webseite zu erwerben!
+Bitte beachten, dass hier nur die Docker Konfigurationsdateien bereitgestellt werden. Der benötigte Download-Link für die Software, sowie die dazugehörige Lizenz ist unabhängig davon über die Orderjutsu Webseite zu erwerben!
 
 2023-06-28: Achtung Docker Dateien wurden aktualisiert. Um mehr der Docker Philosophie zu entsprechen und durch Nutzung der offiziellen Images mehr Architekturen unterstützen zu können (speziell x86/amd64 und arm) wurden nginx und php in zwei getrennte Container aufgeteilt. Für die alte Methode mit nginx+php in einem Container siehe Branch '***all-in-one***'.
 
@@ -73,7 +72,7 @@ docker exec -it orderjutsu-php /bin/sh -c 'cd /srv/www && php artisan migrate --
 ```
 Alternativ wenn auch das orderjutsu Volume gelöscht wurde dann wird die Datenbank beim nächsten Start automatisch neu aufgesetzt.
 
-### Bugs / TODO
+## Bugs / TODO
  - Datenbank Backup (mysqldump) funktioniert nicht
 
  
