@@ -29,7 +29,6 @@ services:
     volumes:
       - orderjutsu-files:/srv
       - ./php/fpm-www.conf:/usr/local/etc/php-fpm.d/www.conf
-      - ./php/setup.sh:/docker-entrypoint-setup.sh
     networks:
       - orderjutsu-network
     depends_on:
