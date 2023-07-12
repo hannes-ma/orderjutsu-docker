@@ -23,7 +23,8 @@ Die Daten werden in zwei Docker-Volumes abgelegt:
 
 ## Konfiguration
 Die ".env" Datei öffnen und den eigenen Download-Link, sowie die aktuelle Orderjutsu-Version eingeben (findet man auf der Orderjutsu Homepage). Die Versionsangabe dient nur zur Namensgebung des Docker-Volumes, es wird ansonsten immer die letzte verfügbare Version installiert.
-Weiters sind die Datenbankparameter für Benutzer, Passwort und Name der Datenbank einzugeben.
+
+Weiters können die Datenbankparameter für Benutzer (DB_USER), Passwort (DB_PASSWORD) und Name der Datenbank (DB_DATABASE) angegeben werden. Diese Parameter werden intern für die Erstellung und den Zugriff auf die Datenbank genutzt. Im Zweifel die Parameter DB_DATABASE und DB_USER auf den voreingestellten Wert belassen und nur das DB_PASSWORD nach eigenen Wünschen abändern. 
 
 *Achtung: Diese .env hat nichts mit der .env von Orderjutsu gemein. Sie dient nur docker-compose zum Laden der Umgebungsvariablen!*
 
